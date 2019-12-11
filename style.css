@@ -1,0 +1,18 @@
+#input {
+  border: 1px solid black;
+  margin: 20px;
+  width: 40vw;
+  height: auto;
+}
+
+#button {
+  height: 5vh;
+  width: 10vw;
+  margin: 20px;
+  background: rgb(55, 77, 199);
+}
+
+.container {
+  height: auto;
+  margin: 0 auto;
+}
