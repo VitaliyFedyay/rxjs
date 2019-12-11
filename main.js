@@ -1,7 +1,9 @@
-import { fromEvent } from 'rxjs'
-import { debounceTime } from 'rxjs/operators'
+const { fromEvent } = require('rxjs')
+const { debounceTime } = require('rxjs/operators')
 
-let button = document.getElementById('button')
-let input = document.getElementById('input').innerHTML
+let buttonClick = document.querySelector('button')
+let typeEvent = document.getElementById('input')
 
-fromEvent(button, 'click').pipe(debounceTime(2000)).subscribe(res => input = res )
+fromEvent(buttonClick, 'click')
+  .pipe(debounceTime(1000))
+  .subscribe(res => typeEvent.innerHTML = `Type of event: ${res.type}` )
